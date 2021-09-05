@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-8</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #navBar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        #navBar a {
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 10px 40px;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #navBar a:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .banner {
+            margin-top: 70px;
+            height: 100vh;
+            margin-bottom: 15px;
+            display: flex;
+            font-size: 40px;
+            color: white;
+            background-image: url(../media/banner.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner h2 {
+            margin: 20px 20px;
+            color: #fff;
+        }
+        
+        .circle-container {
+            width: 100%;
+            margin: 15px auto;
+            height: 100vh;
+        }
+        
+        .circle-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .circle img {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: goldenrod;
+            float: left;
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        
+        .section {
+            height: 100vh;
+        }
+        
+        .section::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .left-side {
+            width: 50%;
+            height: 550px;
+            background-color: gray;
+            float: left;
+            color: #fff;
+        }
+        
+        .projects h2 {
+            text-align: left;
+            margin: 10px 5px;
+        }
+        
+        .projects p {
+            font-size: 20px;
+            padding: 10px;
+            text-align: justify;
+            line-height: 28px;
+        }
+        
+        .right-side {
+            width: 48%;
+            height: 550px;
+            float: right;
+        }
+        
+        .header {
+            content: "";
+            display: block;
+            clear: both;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-align: center;
+        }
+        
+        .menu {
+            list-style: none;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-align: center;
+        }
+        
+        .menu li {
+            line-height: 70px;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .menu li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 0px 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        .menu li a:hover {
+            color: black;
+            background-color: white;
+        }
+        
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 15px;
+            margin: 0px auto;
+        }
+        
+        .show-btn,
+        .hide-btn {
+            font-size: 30px;
+            line-height: 70px;
+            color: white;
+            display: none;
+        }
+        
+        .header {
+            width: 1175px;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            height: 70px;
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .article {
+            height: 31%;
+            margin-bottom: 20px;
+            background-color: chocolate;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            overflow: hidden;
+        }
+        
+        #project1 {
+            background-image: url(../media/projectOne.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #project2 {
+            background-image: url(../media/projectTwo.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #project3 {
+            background-image: url(../media/projectThree.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .grid-container {
+            width: 100%;
+            margin: 15px auto;
+            height: 100vh;
+        }
+        
+        .grid-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+            padding: 25px 0px;
+        }
+        
+        .footer {
+            background-color: plum;
+            height: 100px;
+        }
+        
+        .footer p {
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .heading {
+            color: white;
+            text-align: center;
+        }
+        
+        .card {
+            height: auto;
+            overflow: hidden;
+            width: 22.5%;
+            background-color: whitesmoke;
+            border: black;
+            border-width: 2px;
+            border-style: solid;
+            padding: 10px 10px 10px 10px;
+            text-align: center;
+            border-radius: 15px;
+            margin-right: 3%;
+            flex-shrink: 0;
+        }
+        
+        .card img {
+            object-fit: cover;
+            width: 100%;
+            height: 40%;
+            border-radius: 10%;
+        }
+        
+        .card h3 {
+            font-size: 1.7vw;
+            text-align: center;
+        }
+        
+        p {
+            font-size: 1vw;
+        }
+        
+        .btn {
+            background-color: orange;
+            text-align: center;
+            color: white;
+            border-radius: 10%;
+            font-size: 1.5rem;
+            width: 86%;
+            margin-left: 7%;
+            height: 30px;
+            font-size: 22px;
+            margin-top: 50px;
+        }
+        
+        .btn:hover {
+            background-color: blue;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <ul class="menu">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#circle-container">Team</a></li>
+                <li><a href="#Technologies">Technologies</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+        <a name="top"></a>
+
+        <div class="banner">
+            <div>PRACTICAL - 8</div>
+        </div>
+        <div class="circle-container">
+            <h1>Team Members</h1>
+            <div class="circle">
+                <img src="../media/userOne.jpeg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="../media/userTwo.jpeg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="../media/userThree.jpeg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="../media/userFour.jpeg" alt="" />
+            </div>
+        </div>
+        <div class="section">
+            <a name="about"></a>
+            <h1>About Us</h1>
+            <div class="left-side">
+                <div class="projects">
+                    <h2>About Projects</h2>
+                    <p>
+                        A project is an activity to meet the creation of a unique product or service and thus activities that are undertaken to accomplish routine activities cannot be considered projects. For instance, if your project is less than three months old and has fewer
+                        than 20 people working on it, you may not be working in what is called a project according to the definition of the term. It has to be remembered that the term temporary does not apply to the result or service that is generated
+                        by the project.The project may be finite but not the result. For instance, a project to build a monument would be of fixed duration whereas the result that is the monument may be for an indefinite period in time. A project is an
+                        activity to create something unique. Of course, many of the office buildings that are built are similar in many respects but each individual facility is unique in its own way. Finally, a project must be progressively elaborated.
+                        This means that the project progresses in steps and continues by increments.
+                    </p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="article" id="project1">
+                    <h2>Project-1</h2>
+                </div>
+                <div class="article" id="project2">
+                    <h2>Project-2</h2>
+                </div>
+                <div class="article" id="project3">
+                    <h2>Project-3</h2>
+                </div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <a name="Technologies"></a>
+            <h1>Technologies Used</h1>
+            <div class="container1">
+                <div class="card">
+                    <img src="../media/Capture2.PNG" />
+                    <h4>Introduction to HTML</h4>
+                    <br>
+                    <p>
+                        HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext adefines the link between the web pages.
+                    </p>
+                    <a href="introductiontocss.html">
+                        <div class="btn">Read More</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="../media/CSS1.png" />
+                    <h4>Introduction to CSS</h4>
+                    <br>
+                    <p>
+                        Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages.
+                    </p>
+                    <a href="introductiontocss.html">
+                        <div class="btn">Read More</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="../media/download.jpg" />
+                    <h4>Introduction to Javascript</h4>
+                    <br>
+                    <p>
+                        JavaScript is a cross-platform, and interpreted scripting language. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments.
+                    </p>
+                    <a href="introductiontojs.html">
+                        <div class="btn">Read More</div>
+                    </a>
+                </div>
+                <div class="card" style="margin-right: 1px">
+                    <img src="../media/maxresdefault.jpg" />
+                    <h4>Introduction to Bootstrap</h4>
+                    <br>
+                    <p>
+                        Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites
+                    </p>
+                    <a href="introductiontobootstrap.html">
+                        <div class="btn">Read More</div>
+                    </a>
+                </div>
+            </div>
+            <a name="contact"></a>
+            <h1>Contact</h1>
+            <div class="footer">
+                <p>
+                    Name: Devvrat Sharma <br> E-mail: devvvrats@gmail.com <br>
+                    <br>
+                    <a href="#top">Back to top</a>
+                </p>
+            </div>
+        </div>
+</body>
+
+</html>
