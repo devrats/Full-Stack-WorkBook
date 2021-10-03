@@ -2,29 +2,277 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assignment 4</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-12</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        border-style: 0;
+    }
+    
+    body {
+        background-color: lightgrey;
+    }
+    
+    .wrapper {
+        width: 1100px;
+        background-color: #fff;
+        margin: 40px auto;
+        border: 1px solid black;
+    }
+    
+    td {
+        height: 60px;
+    }
+    
+    .custom-table {
+        width: 100%;
+        margin: 0 auto;
+        min-width: 400px;
+        border: 2px solid black;
+    }
+    
+    .sub {
+        color: darkgreen;
+    }
+    
+    .custom-table td,
+    .custom-table th {
+        border-right: 2px solid white;
+        border-left: 2px solid white;
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    i {
+        color: grey;
+    }
+    
+    i:hover {
+        color: blue;
+    }
+    
+    .head {
+        color: pink;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: 30px;
+        vertical-align: middle;
+    }
+    
+    thead {
+        color: black;
+        font-size: 20px;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(199, 36, 63);
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+    }
+</style>
 
 <body>
-    <h1>Welcome to Live Practical Book</h1>
-    <p>This is Live Practical Book for the Subject Fullstack Web Development-1. In this book we are performing all the practicals related to Front-end web development including topics from HTML. CSS, JS and Bootstrap. This book is hosted on Github cloud
-        platform. You can view all the practicals from this Book.</p>
-    <h2>List of Practicals </h2>
-    <div style="font-weight: bold;">
-        <a style="text-decoration: none;" href="./practical/assignment1.html">1. Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment Practical-1</a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment2.html">2. Create a web page showing a basic html structure using character Entities and span Tag. Practical-2</a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment3.html">3. Live your First Web-Page on Git-Hub, Practical-3
-    </a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment4.html">4. Create a website having list of all practical and their individual practical Page links Practical-4 </a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment5.html">5. Create a Web-Page showing the use of Image-Map in the Web Application Practical-5</a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment6.html">6. Create layout divs in form of card using css Practical-6</a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment7.html">7. Create layout divs in form of card using css Practical-7</a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment8.html">8. Create page of team introduction Practical-8</a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment9.html">9. Create a responsive page of team introduction Practical-9</a> <br> <br>
-        <a style="text-decoration: none;" href="./practical/assignment10.html">9. Create a responsive sidebar Practical-10</a> <br> <br>
+    <div class="wrapper">
+        <table class="custom-table">
+            <colgroup class="c1"></colgroup>
+            <colgroup class="c2"></colgroup>
+            <colgroup class="c3"></colgroup>
+            <colgroup class="c4"></colgroup>
+            <thead>
+                <p>Full stack Live practical Book.</p>
+                <tr>
+                    <td>
+                        <b>#</b>
+                    </td>
+                    <td>
+                        <b>Practical Name</b>
+                    </td>
+                    <td>
+                        <b>Link</b>
+                    </td>
+                    <td>
+                        <b>Status</b>
+                    </td>
+                    <td>
+                        <b>Tools</b>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment.
+                    </td>
+                    <td>
+                        <a href="./practical/assignment1.html">Practical-1</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        Create a web page showing a basic html structure using character Entities and span Tag.
+                    </td>
+                    <td>
+                        <a href="./practical/assignment2.html">Practical-2</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Live your first Web Page on GitHub.</td>
+                    <td>
+                        <a href="./practical/assignment3.html">Practical-3</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        Create a website having list of all practicals and their individual Practical page links.
+                    </td>
+                    <td>
+                        <a href="./practical/assignment4.html">Practical-4</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Create a website having a clickable image.</td>
+                    <td>
+                        <a href="./practical/assignment5.html">Practical-5</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Create following Layout using css layout properties.</td>
+                    <td>
+                        <a href="./practical/assignment6.html">Practical-6</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Create a Web Page Layout using div tags.</td>
+                    <td>
+                        <a href="./practical/assignment7.html">Practical-7</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>
+                        Create a Web Page having Fixed Navigation Bar with the given content
+                    </td>
+                    <td>
+                        <a href="./practical/assignment8.html">Practical-8</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>
+                        Create a Responsive Web Layout with Responsive Navigation Bar.
+                    </td>
+                    <td>
+                        <a href="./practical/assignment9.html">Practical-9</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Create a Responsive Side-Bar Navigation Menu.</td>
+                    <td>
+                        <a href="./practical/assignment10.html">Practical-10</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Create a Responsive Footer Template.</td>
+                    <td>
+                        <a href="./practical/assignment11.html">Practical-11</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Create a Table that represent Live Practical Book Records .</td>
+                    <td>
+                        <a href="./practical/assignment12.html">Practical-12</a>
+                    </td>
+                    <td class="sub">Submitted.</td>
+                    <td>
+                        <i class="fa fa-pencil"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
