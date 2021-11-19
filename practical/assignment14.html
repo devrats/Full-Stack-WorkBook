@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #e2e2e2;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        h1 {
+            /* padding-top: 20px; */
+            color: black;
+            font-size: 50px;
+        }
+        
+        button {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: blueviolet;
+            outline: none;
+            font-size: 24px;
+            margin: 0 50px;
+        }
+        
+        span {
+            color: black;
+            font-size: 50px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>COUNTER</h1>
+
+    <div id="container">
+        <button id="btn1" onclick="dec()">-</button>
+        <span id="content">0</span>
+        <button onclick="inc()">+</button>
+    </div>
+
+    <script>
+        var counter = 0;
+        var btn1 = document.getElementById("btn1");
+        btn1.disabled = true;
+
+        function dec() {
+            counter -= 1;
+            document.getElementById("content").innerHTML = counter;
+            if (counter == 0) {
+                btn1.disabled = true;
+            }
+        }
+
+        function inc() {
+            btn1.disabled = false;
+            counter += 1;
+            document.getElementById("content").innerHTML = counter;
+        }
+    </script>
+</body>
+
+</html>
